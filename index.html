@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iAmGodKiller</title>
+    <!-- Favicon link with ID for the dynamic script to update -->
+    <!-- PASTE YOUR IMAGE LINK HERE IN THE HREF -->
+    <link id="dynamic-favicon" rel="icon" href="https://lh3.googleusercontent.com/gg/AMW1TPrW0jPYc7I1DRqgj1nZkj0IxekCyKhFjkNVpa44MV7Z2HpITV79270fiK_XhuPoHcZpEqYepgA9XJgCHa00Yu1n81p9of4XLN0fKKqooLDWxHsiG32z9VBFjh6bdiUX9XldnxGNNNVCwRXOBLt1BgqBI4JvJ9IgceNGHXNOP0_mHWw11qdC=s1600-rj-mp2" type="image/jpeg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        /* Material 3 Dark & Expressive Styles */
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #1E192C; /* Deep M3 Purple Surface */
+            color: #E6E0E9; /* M3 Dark On-Surface */
+            min-height: 100vh;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* M3 State Layers (Hover/Focus/Press) */
+        .m3-state-layer {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s cubic-bezier(0.2, 0, 0, 1),
+                        box-shadow 0.3s cubic-bezier(0.2, 0, 0, 1);
+        }
+
+        .m3-state-layer::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-color: currentColor;
+            opacity: 0;
+            transition: opacity 0.2s linear;
+            pointer-events: none;
+            border-radius: inherit;
+        }
+
+        .m3-state-layer:hover {
+            transform: scale(1.02);
+            box-shadow: 0px 4px 8px 3px rgba(0, 0, 0, 0.3), 0px 1px 3px 0px rgba(0, 0, 0, 0.4); /* M3 Elevation 2 Dark */
+        }
+
+        .m3-state-layer:hover::after {
+            opacity: 0.08; /* M3 Hover State Layer */
+        }
+
+        .m3-state-layer:active::after {
+            opacity: 0.12; /* M3 Pressed State Layer */
+        }
+
+        /* M3 Expressive Asymmetrical Shape */
+        .shape-expressive {
+            border-radius: 48px 16px 48px 16px;
+            transition: border-radius 0.5s cubic-bezier(0.2, 0, 0, 1);
+        }
+        
+        .shape-expressive:hover {
+            border-radius: 16px 48px 16px 48px;
+        }
+
+        .fade-in {
+            animation: m3-enter 0.6s cubic-bezier(0.2, 0, 0, 1) forwards;
+            opacity: 0;
+        }
+
+        @keyframes m3-enter {
+            from { opacity: 0; transform: translateY(30px) scale(0.95); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1E192C;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #49454F;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center py-10 px-4 sm:px-6">
+
+    <!-- New Hosting Layer / Main Container (M3 Purple Elevated Surface) -->
+    <main class="w-full max-w-[520px] bg-[#2B223D] p-6 sm:p-10 rounded-[3rem] shadow-2xl border border-[#D0BCFF]/10 flex flex-col items-center relative overflow-hidden z-10 m3-elevation-2">
+
+        <!-- Subtle top glow inside the card -->
+        <div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-[#D0BCFF]/10 to-transparent -z-10 pointer-events-none"></div>
+
+        <!-- Profile Section -->
+        <div class="w-full text-center mb-10 fade-in">
+            <div class="relative inline-block mb-6">
+                <!-- Added ID for the script to fetch -->
+                <!-- PASTE YOUR IMAGE LINK HERE IN THE SRC -->
+                <img 
+                    id="profile-img"
+                    src="https://lh3.googleusercontent.com/gg/AMW1TPrW0jPYc7I1DRqgj1nZkj0IxekCyKhFjkNVpa44MV7Z2HpITV79270fiK_XhuPoHcZpEqYepgA9XJgCHa00Yu1n81p9of4XLN0fKKqooLDWxHsiG32z9VBFjh6bdiUX9XldnxGNNNVCwRXOBLt1BgqBI4JvJ9IgceNGHXNOP0_mHWw11qdC=s1600-rj-mp2" 
+                    alt="Profile Picture" 
+                    class="w-36 h-36 object-cover bg-[#1E192C] shape-expressive shadow-lg border-2 border-[#D0BCFF]/20"
+                >
+            </div>
+            <h1 class="text-[2.5rem] leading-[3rem] sm:text-[2.75rem] sm:leading-[3.25rem] font-semibold tracking-tight text-[#EADDFF]">iAmGodKiller</h1>
+        </div>
+
+        <!-- Links Container -->
+        <div class="w-full space-y-4 fade-in" style="animation-delay: 0.1s">
+            
+            <!-- Instagram (M3 Tertiary Container Palette) -->
+            <a href="https://instagram.com" target="_blank" class="m3-state-layer flex items-center p-3 pr-6 rounded-[2rem] bg-[#633B48] text-[#FFD8E4] group">
+                <div class="w-14 h-14 flex items-center justify-center rounded-[1.25rem] bg-[#FFD8E4] text-[#31111D] shrink-0">
+                    <i class="fab fa-instagram text-[1.75rem]"></i>
+                </div>
+                <span class="ml-5 font-medium text-[1.15rem] sm:text-[1.25rem] tracking-wide">Instagram</span>
+                <i class="fas fa-arrow-right ml-auto opacity-70 group-hover:opacity-100 transition-opacity"></i>
+            </a>
+
+            <!-- X (M3 Secondary Container Palette) -->
+            <a href="https://twitter.com" target="_blank" class="m3-state-layer flex items-center p-3 pr-6 rounded-[2rem] bg-[#004D61] text-[#B9EAFF] group">
+                <div class="w-14 h-14 flex items-center justify-center rounded-[1.25rem] bg-[#B9EAFF] text-[#001F2A] shrink-0">
+                    <i class="fab fa-x-twitter text-[1.75rem]"></i>
+                </div>
+                <span class="ml-5 font-medium text-[1.15rem] sm:text-[1.25rem] tracking-wide">X</span>
+                <i class="fas fa-arrow-right ml-auto opacity-70 group-hover:opacity-100 transition-opacity"></i>
+            </a>
+
+            <!-- YouTube (M3 Error Container Palette) -->
+            <a href="https://youtube.com" target="_blank" class="m3-state-layer flex items-center p-3 pr-6 rounded-[2rem] bg-[#8C1D18] text-[#F9DEDC] group">
+                <div class="w-14 h-14 flex items-center justify-center rounded-[1.25rem] bg-[#F9DEDC] text-[#410002] shrink-0">
+                    <i class="fab fa-youtube text-[1.75rem]"></i>
+                </div>
+                <span class="ml-5 font-medium text-[1.15rem] sm:text-[1.25rem] tracking-wide">YouTube</span>
+                <i class="fas fa-arrow-right ml-auto opacity-70 group-hover:opacity-100 transition-opacity"></i>
+            </a>
+
+            <!-- LinkedIn (M3 Primary Container Palette) -->
+            <a href="https://linkedin.com" target="_blank" class="m3-state-layer flex items-center p-3 pr-6 rounded-[2rem] bg-[#4F378B] text-[#EADDFF] group">
+                <div class="w-14 h-14 flex items-center justify-center rounded-[1.25rem] bg-[#EADDFF] text-[#21005D] shrink-0">
+                    <i class="fab fa-linkedin-in text-[1.75rem]"></i>
+                </div>
+                <span class="ml-5 font-medium text-[1.15rem] sm:text-[1.25rem] tracking-wide">LinkedIn</span>
+                <i class="fas fa-arrow-right ml-auto opacity-70 group-hover:opacity-100 transition-opacity"></i>
+            </a>
+
+            <!-- Reddit (Custom Expressive Orange M3 Palette) -->
+            <a href="https://reddit.com" target="_blank" class="m3-state-layer flex items-center p-3 pr-6 rounded-[2rem] bg-[#7A2F00] text-[#FFDBC2] group">
+                <div class="w-14 h-14 flex items-center justify-center rounded-[1.25rem] bg-[#FFDBC2] text-[#2E1500] shrink-0">
+                    <i class="fab fa-reddit-alien text-[1.75rem]"></i>
+                </div>
+                <span class="ml-5 font-medium text-[1.15rem] sm:text-[1.25rem] tracking-wide">Reddit</span>
+                <i class="fas fa-arrow-right ml-auto opacity-70 group-hover:opacity-100 transition-opacity"></i>
+            </a>
+
+            <!-- Telegram (Custom M3 Cyan/Blue Palette) -->
+            <a href="https://telegram.org" target="_blank" class="m3-state-layer flex items-center p-3 pr-6 rounded-[2rem] bg-[#004A77] text-[#C1E8FF] group">
+                <div class="w-14 h-14 flex items-center justify-center rounded-[1.25rem] bg-[#C1E8FF] text-[#001E36] shrink-0">
+                    <i class="fab fa-telegram text-[1.75rem]"></i>
+                </div>
+                <span class="ml-5 font-medium text-[1.15rem] sm:text-[1.25rem] tracking-wide">Telegram</span>
+                <i class="fas fa-arrow-right ml-auto opacity-70 group-hover:opacity-100 transition-opacity"></i>
+            </a>
+
+            <!-- Discord (Custom M3 Indigo Palette) -->
+            <a href="https://discord.com" target="_blank" class="m3-state-layer flex items-center p-3 pr-6 rounded-[2rem] bg-[#3B408A] text-[#DFE0FF] group">
+                <div class="w-14 h-14 flex items-center justify-center rounded-[1.25rem] bg-[#DFE0FF] text-[#0A0E5C] shrink-0">
+                    <i class="fab fa-discord text-[1.75rem]"></i>
+                </div>
+                <span class="ml-5 font-medium text-[1.15rem] sm:text-[1.25rem] tracking-wide">Discord</span>
+                <i class="fas fa-arrow-right ml-auto opacity-70 group-hover:opacity-100 transition-opacity"></i>
+            </a>
+
+            <!-- Facebook (Custom M3 Blue Palette) -->
+            <a href="https://facebook.com" target="_blank" class="m3-state-layer flex items-center p-3 pr-6 rounded-[2rem] bg-[#0842A0] text-[#D3E3FD] group">
+                <div class="w-14 h-14 flex items-center justify-center rounded-[1.25rem] bg-[#D3E3FD] text-[#001C3B] shrink-0">
+                    <i class="fab fa-facebook text-[1.75rem]"></i>
+                </div>
+                <span class="ml-5 font-medium text-[1.15rem] sm:text-[1.25rem] tracking-wide">Facebook</span>
+                <i class="fas fa-arrow-right ml-auto opacity-70 group-hover:opacity-100 transition-opacity"></i>
+            </a>
+
+            <!-- Email (Custom M3 Teal Palette) -->
+            <a href="mailto:your.email@example.com" class="m3-state-layer flex items-center p-3 pr-6 rounded-[2rem] bg-[#005353] text-[#7CF8F8] group">
+                <div class="w-14 h-14 flex items-center justify-center rounded-[1.25rem] bg-[#7CF8F8] text-[#002020] shrink-0">
+                    <i class="fas fa-envelope text-[1.75rem]"></i>
+                </div>
+                <span class="ml-5 font-medium text-[1.15rem] sm:text-[1.25rem] tracking-wide">Email Me</span>
+                <i class="fas fa-arrow-right ml-auto opacity-70 group-hover:opacity-100 transition-opacity"></i>
+            </a>
+
+            <!-- GitHub (M3 Surface Variant Palette) -->
+            <a href="https://github.com" target="_blank" class="m3-state-layer flex items-center p-3 pr-6 rounded-[2rem] bg-[#49454F] text-[#CAC4D0] group">
+                <div class="w-14 h-14 flex items-center justify-center rounded-[1.25rem] bg-[#CAC4D0] text-[#1B1B1F] shrink-0">
+                    <i class="fab fa-github text-[1.75rem]"></i>
+                </div>
+                <span class="ml-5 font-medium text-[1.15rem] sm:text-[1.25rem] tracking-wide">GitHub</span>
+                <i class="fas fa-arrow-right ml-auto opacity-70 group-hover:opacity-100 transition-opacity"></i>
+            </a>
+
+        </div>
+    </main>
+
+    <!-- Script to dynamically shape the favicon -->
+    <script>
+        window.addEventListener('load', () => {
+            const profileImg = document.getElementById('profile-img');
+            const faviconLink = document.getElementById('dynamic-favicon');
+            
+            // Create a canvas to draw the shaped image
+            const canvas = document.createElement('canvas');
+            const size = 128; // Standard high-res favicon size
+            canvas.width = size;
+            canvas.height = size;
+            const ctx = canvas.getContext('2d');
+
+            const img = new Image();
+            img.crossOrigin = "anonymous";
+            img.src = profileImg.src;
+
+            img.onload = () => {
+                // Background color matching the new profile picture background (#1E192C)
+                ctx.fillStyle = '#1E192C';
+                
+                // M3 Expressive shape parameters calculated for a 128px canvas
+                // 48px -> ~37.5% of 128 = 48
+                // 16px -> ~12.5% of 128 = 16
+                const largeRad = 48;
+                const smallRad = 16;
+
+                // Draw the custom asymmetrical shape path
+                ctx.beginPath();
+                ctx.moveTo(largeRad, 0); 
+                ctx.lineTo(size - smallRad, 0); 
+                ctx.quadraticCurveTo(size, 0, size, smallRad); 
+                ctx.lineTo(size, size - largeRad); 
+                ctx.quadraticCurveTo(size, size, size - largeRad, size); 
+                ctx.lineTo(smallRad, size); 
+                ctx.quadraticCurveTo(0, size, 0, size - smallRad); 
+                ctx.lineTo(0, largeRad); 
+                ctx.quadraticCurveTo(0, 0, largeRad, 0); 
+                ctx.closePath();
+
+                // Fill background and clip to the shape
+                ctx.fill();
+                ctx.clip();
+
+                // Draw the image inside the clipped path
+                ctx.drawImage(img, 0, 0, size, size);
+
+                // Update the favicon link with the newly generated shaped image
+                faviconLink.href = canvas.toDataURL('image/png');
+            };
+        });
+    </script>
+</body>
+</html>
